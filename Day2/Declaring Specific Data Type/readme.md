@@ -159,7 +159,7 @@ student: dict[str, int] = {"roll": 101, "marks": 95}
 
 ---
 
-# ✅ Notes
+# Notes
 
 * Python is **dynamically typed** → no need to declare data types explicitly.
 * Use constructors (`int()`, `str()`, `list()`, etc.) for explicit declaration.
