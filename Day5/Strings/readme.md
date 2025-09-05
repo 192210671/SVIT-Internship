@@ -174,3 +174,47 @@ print("Length of name:", len(name))
 ```
 
 
+
+##  Reversing a String
+
+There are multiple ways to reverse a string in Python.
+
+### 1. Using Slicing
+```python
+s = "Python"
+print(s[::-1])   # nohtyP
+````
+
+### 2. Using `reversed()` and `join()`
+
+```python
+s = "Python"
+print("".join(reversed(s)))   # nohtyP
+```
+
+### 3. Using a Loop
+
+```python
+s = "Python"
+rev = ""
+for char in s:
+    rev = char + rev
+print(rev)   # nohtyP
+```
+
+### 4. Using Recursion
+
+```python
+def reverse_string(s):
+    if len(s) == 0:
+        return s
+    else:
+        return reverse_string(s[1:]) + s[0]
+
+print(reverse_string("Python"))   # nohtyP
+```
+
+---
+
+
+
