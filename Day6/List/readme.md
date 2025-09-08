@@ -1,4 +1,4 @@
-````markdown
+
 # 📌 Python List and Its Built-in Functions
 
 A **list** in Python is an **ordered, mutable, and iterable** data structure that can hold elements of different data types.  
