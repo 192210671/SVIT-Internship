@@ -120,5 +120,70 @@ print(all([1, 2, 3]))          # True
 
 ```
 
-Would you like me to also add a **visual table (method → description → example)** inside the README for quick reference?
+
+#  Python List – All Built-in Methods
+
+A **list** in Python is an ordered, mutable collection.  
+Below are all the built-in **list methods** available.
+
+---
+
+## 🔹 List Methods
+
+| Method | Description | Example |
+|--------|-------------|---------|
+| `append(x)` | Adds an item to the end of the list | `lst.append(10)` |
+| `extend(iterable)` | Extends list by appending elements from another iterable | `lst.extend([4, 5])` |
+| `insert(i, x)` | Inserts item at given position | `lst.insert(1, "a")` |
+| `remove(x)` | Removes first occurrence of `x` | `lst.remove(3)` |
+| `pop([i])` | Removes and returns item at index (last if not given) | `lst.pop()` |
+| `clear()` | Removes all items from list | `lst.clear()` |
+| `index(x[, start[, end]])` | Returns index of first occurrence of `x` | `lst.index(2)` |
+| `count(x)` | Returns count of `x` in list | `lst.count(2)` |
+| `sort(key=None, reverse=False)` | Sorts the list in place | `lst.sort()` |
+| `reverse()` | Reverses list in place | `lst.reverse()` |
+| `copy()` | Returns a shallow copy of list | `new_lst = lst.copy()` |
+
+---
+
+## 🔹 Functions That Work on Lists
+These are **not methods**, but built-in functions that commonly work on lists:
+
+| Function | Description | Example |
+|----------|-------------|---------|
+| `len(lst)` | Returns number of items | `len(lst)` |
+| `max(lst)` | Returns largest element | `max(lst)` |
+| `min(lst)` | Returns smallest element | `min(lst)` |
+| `sum(lst)` | Returns sum of numeric elements | `sum([1,2,3])` |
+| `sorted(lst)` | Returns a new sorted list | `sorted(lst, reverse=True)` |
+| `any(lst)` | True if any element is truthy | `any([0, "", 5])` |
+| `all(lst)` | True if all elements are truthy | `all([1, 2, 3])` |
+
+---
+
+## 🔹 Example Program
+```python
+nums = [3, 1, 4, 1, 5]
+
+nums.append(9)        # [3, 1, 4, 1, 5, 9]
+nums.insert(2, 7)     # [3, 1, 7, 4, 1, 5, 9]
+nums.remove(1)        # removes first 1 → [3, 7, 4, 1, 5, 9]
+nums.pop()            # removes last → [3, 7, 4, 1, 5]
+nums.sort()           # [1, 3, 4, 5, 7]
+nums.reverse()        # [7, 5, 4, 3, 1]
+
+print(nums.count(5))  # 1
+print(nums.index(4))  # 2
+print(nums.copy())    # [7, 5, 4, 3, 1]
+````
+
+---
+
+## ✅ Summary
+
+* Lists support **11 built-in methods** (`append`, `extend`, `insert`, `remove`, `pop`, `clear`, `index`, `count`, `sort`, `reverse`, `copy`).
+* Several built-in functions (`len`, `max`, `min`, etc.) also operate on lists.
+
 ```
+
+
