@@ -118,7 +118,7 @@ print(all([1, 2, 3]))          # True
 * **Versatile**: Can store mixed data types
 * **Supports many methods**: add, remove, search, sort, etc.
 
-```
+
 
 
 #  Python List – All Built-in Methods
