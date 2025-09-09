@@ -387,5 +387,203 @@ print(s)  # Output: {frozenset({1, 2, 3})}
 
 
 
+# 🤔 20 Tricky Python Set Interview Questions and Answers
+
+---
+
+## 1️⃣ Can a Set contain another Set as an element?
+❌ No, because sets are mutable and unhashable.  
+✅ But you can use `frozenset` (immutable set) as an element.
+
+```python
+s = {frozenset([1, 2, 3])}
+````
+
+---
+
+## 2️⃣ What happens if you add a list to a Set?
+
+❌ Raises `TypeError` because lists are unhashable.
+
+---
+
+## 3️⃣ How do you create an empty Set?
+
+✅ Correct way:
+
+```python
+empty_set = set()
+```
+
+❌ `{}` creates an empty dictionary, not a set.
+
+---
+
+## 4️⃣ What is the result of `set("aabbcc")`?
+
+```python
+result = set("aabbcc")
+# {'a', 'b', 'c'}
+```
+
+Duplicates are automatically removed.
+
+---
+
+## 5️⃣ Is the order of elements in a Set preserved?
+
+❌ No.
+Sets are unordered and do not preserve element order.
+
+---
+
+## 6️⃣ What is the difference between `symmetric_difference()` and `difference()`?
+
+* `difference()` returns elements in `A` but not in `B`.
+* `symmetric_difference()` returns elements in either `A` or `B`, but not in both.
+
+```python
+A = {1, 2, 3}
+B = {3, 4}
+
+A.difference(B)             # {1, 2}
+A.symmetric_difference(B)   # {1, 2, 4}
+```
+
+---
+
+## 7️⃣ Can sets have duplicate elements?
+
+❌ No, sets automatically remove duplicates when created.
+
+---
+
+## 8️⃣ What happens if you do `s.add([1, 2])` where `s` is a Set?
+
+❌ Raises `TypeError` because `[1, 2]` is a list and unhashable.
+
+---
+
+## 9️⃣ Can you perform set operations on other iterables (like lists)?
+
+✅ Yes, by converting them into sets.
+
+```python
+list1 = [1, 2, 3]
+list2 = [3, 4, 5]
+
+result = set(list1).intersection(list2)  # {3}
+```
+
+---
+
+## 🔟 What does `isdisjoint()` do?
+
+Returns `True` if two sets have no elements in common.
+
+```python
+{1, 2}.isdisjoint({3, 4})  # True
+```
+
+---
+
+## 1️⃣1️⃣ How does `pop()` behave in sets?
+
+Removes and returns an **arbitrary** element, because sets are unordered.
+
+```python
+s = {1, 2, 3}
+element = s.pop()  # Could be 1, 2, or 3
+```
+
+---
+
+## 1️⃣2️⃣ What is the difference between `update()` and `union()`?
+
+* `update()` modifies the set in-place.
+* `union()` returns a new set.
+
+```python
+a = {1, 2}
+b = {3, 4}
+
+a.update(b)  # a becomes {1, 2, 3, 4}
+c = a.union(b)  # c is a new set {1, 2, 3, 4}
+```
+
+---
+
+## 1️⃣3️⃣ Can Sets contain `None`?
+
+✅ Yes.
+
+```python
+s = {None}
+print(s)  # {None}
+```
+
+---
+
+## 1️⃣4️⃣ What happens when you `remove()` an element not present in the set?
+
+❌ Raises `KeyError`.
+
+Use `discard()` if you want to avoid errors.
+
+---
+
+## 1️⃣5️⃣ How to convert a set to a list?
+
+```python
+s = {1, 2, 3}
+lst = list(s)
+```
+
+---
+
+## 1️⃣6️⃣ Can set elements be mutable?
+
+❌ No, elements must be immutable (numbers, strings, tuples).
+
+---
+
+## 1️⃣7️⃣ Is a `frozenset` mutable or immutable?
+
+✅ Immutable.
+Good for use as a key in a dictionary or as an element of a set.
+
+---
+
+## 1️⃣8️⃣ How do you get the number of elements in a Set?
+
+```python
+s = {1, 2, 3}
+length = len(s)  # 3
+```
+
+---
+
+## 1️⃣9️⃣ What is the time complexity of checking membership in a Set?
+
+✅ O(1) on average (because of hash table implementation).
+
+---
+
+## 2️⃣0️⃣ What is the difference between `copy()` and direct assignment (`=`)?
+
+```python
+a = {1, 2}
+b = a         # Both point to same object
+c = a.copy()  # c is a separate object
+
+a.add(3)
+print(b)  # {1, 2, 3}  (same object)
+print(c)  # {1, 2}     (independent copy)
+```
+
+---
+
+
+
 
 
