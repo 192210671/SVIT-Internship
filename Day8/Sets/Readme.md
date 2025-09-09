@@ -268,7 +268,124 @@ a.update(b)
 
 ---
 
-Would you like me to export this full list of methods as a `.md` file for easy reference?
+
+# 📋 Python Set - Interview Questions
+
+## 1️⃣ What is a Set in Python?
+A **Set** is an unordered collection of **unique** and **immutable** elements. Sets are mutable themselves but contain only immutable objects. They are mainly used for membership testing and eliminating duplicate entries.
+
+---
+
+## 2️⃣ How do you create a Set in Python?
+```python
+# Using curly braces
+my_set = {1, 2, 3}
+
+# Using set() constructor
+my_set = set([1, 2, 3])
+````
+
+---
+
+## 3️⃣ What are the key properties of a Set?
+
+* Unordered
+* No duplicate elements
+* Elements must be immutable (numbers, strings, tuples)
+* Mutable set itself (can add/remove elements)
+
+---
+
+## 4️⃣ How do you add and remove elements in a Set?
+
+```python
+s = {1, 2, 3}
+
+# Add
+s.add(4)
+
+# Remove (raises KeyError if element not present)
+s.remove(3)
+
+# Discard (no error if element not present)
+s.discard(5)
+
+# Pop (removes arbitrary element)
+element = s.pop()
+```
+
+---
+
+## 5️⃣ What is the difference between `remove()` and `discard()`?
+
+* `remove(x)` throws `KeyError` if `x` is not present.
+* `discard(x)` does not raise any error if `x` is absent.
+
+---
+
+## 6️⃣ Explain Set Operations with Examples.
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+# Union
+print(a.union(b))  # {1, 2, 3, 4, 5}
+
+# Intersection
+print(a.intersection(b))  # {3}
+
+# Difference
+print(a.difference(b))  # {1, 2}
+
+# Symmetric Difference
+print(a.symmetric_difference(b))  # {1, 2, 4, 5}
+```
+
+---
+
+## 7️⃣ How do you check if one set is a subset or superset of another?
+
+```python
+a = {1, 2}
+b = {1, 2, 3}
+
+print(a.issubset(b))    # True
+print(b.issuperset(a))  # True
+```
+
+---
+
+## 8️⃣ What is the time complexity of basic Set operations?
+
+| Operation                         | Time Complexity    |
+| --------------------------------- | ------------------ |
+| Membership Test (`x in s`)        | O(1) on average    |
+| Add/Remove Element                | O(1) on average    |
+| Union / Intersection / Difference | O(len(s) + len(t)) |
+
+---
+
+## 9️⃣ Can a Set contain another Set as an element?
+
+No, because a Set is unhashable. But a `frozenset` (immutable set) can be an element in a set.
+
+```python
+a = frozenset([1, 2, 3])
+s = {a}
+print(s)  # Output: {frozenset({1, 2, 3})}
+```
+
+---
+
+## 🔟 When would you use a Set instead of a List?
+
+* To remove duplicates
+* When fast membership testing is required (`in` operation)
+* Performing mathematical set operations (union, intersection, difference)
+
+
+
 
 
 
