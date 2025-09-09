@@ -5,7 +5,7 @@
 
 A **Set** is an unordered collection of **unique** elements in Python. Sets are mutable, meaning you can add or remove elements after creation. However, elements inside a set must be **immutable** (e.g., numbers, strings, tuples).
 
-### ⚡ Key Properties of Sets:
+### ⚡ Key Properties of Sets
 - No duplicate elements
 - Unordered (no indexing)
 - Mutable (but elements must be immutable)
